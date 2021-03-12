@@ -1,0 +1,24 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "dist/angular-blog-project",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [ {
+      "source": "/admin",
+      "destination": "/admin/login",
+      "type": 301
+    }]
+  }
+}
